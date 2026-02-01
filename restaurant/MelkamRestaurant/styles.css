@@ -1,0 +1,138 @@
+body {
+    background-color: rgb(16, 18, 10);
+    color: aliceblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgb(42, 37, 37);
+   
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+    font-size: 20px;
+    font-weight: bolder;
+     flex-wrap: wrap;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+   font-weight: bolder;
+    font-size: 25px;
+    color: bisque;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 12px;
+  border-bottom: 3px solid rgba(223, 122, 22, 0.856);
+  border-radius: 50%;
+}
+
+  
+
+
+.logo-right {
+    display: flex;
+    gap: 20px;
+    font-size: 17px;
+    font-weight: normal;
+}
+.home:hover,.abt:hover,.special:hover,.contact:hover{
+    color: bisque;
+    
+    border-bottom: solid 1.5px  rgba(223, 122, 22, 0.856);
+    border-radius: 10px 10px 10px;
+    cursor: pointer;
+  
+    
+}
+.header-right{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+
+.header-right button {
+   
+    border: none;
+    color: aliceblue;
+    background-color: rgb(238, 159, 56);
+    padding: 10px 20px;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 20px;
+    min-width: 160px;
+}
+
+
+button:hover {
+    cursor:pointer;
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+
+    
+}
+.description{
+    
+    justify-self: center;
+   
+}
+.description p{
+    justify-self: center;
+    font-size: larger;
+    opacity: 0.8;
+}
+
+/* from chat gpt*/
+
+.carousel {
+   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.images {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;   
+    scroll-behavior: smooth;
+    gap: 16px;
+    width: 600px;
+}
+.images::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.poster img {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.arrow {
+    background: aqua;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+}
