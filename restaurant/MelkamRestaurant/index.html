@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melkam — Fine Dining</title>
+  <meta name="description" content="Experience fine dining like never before. Reserve your table at Melkam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading screen -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__mark">M</span>
+      <p class="loader__text">Melkam</p>
+      <div class="loader__bar"><span></span></div>
+    </div>
+  </div>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Floating order CTA -->
+  <a href="#reservations" class="order-fab" data-animate>
+    <span class="order-fab__icon" aria-hidden="true">◆</span>
+    <span>Order online</span>
+  </a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="#hero" class="nav__brand">
+        <span class="nav__logo">Melkam</span>
+      </a>
+      <button type="button" class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reservations" class="nav__cta">Reservations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__media" role="img" aria-label="Elegant restaurant dining room">
+        <div class="hero__bg" style="--hero-img: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=85');"></div>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content" data-animate>
+        <p class="hero__eyebrow">Est. 2018 · Amsterdam</p>
+        <h1 class="hero__title">Experience Fine Dining Like Never Before</h1>
+        <p class="hero__tagline">Seasonal ingredients, refined technique, and a warm welcome—every evening.</p>
+        <div class="hero__actions">
+          <a href="#menu" class="btn btn--primary">View menu</a>
+          <a href="#reservations" class="btn btn--ghost">Reserve table</a>
+        </div>
+      </div>
+      <a href="#menu" class="hero__scroll" aria-label="Scroll to menu">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- Menu -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <header class="section__head" data-animate>
+          <p class="section__eyebrow">The menu</p>
+          <h2 class="section__title">Crafted for the senses</h2>
+          <p class="section__lead">Dishes change with the seasons. Here is a taste of tonight.</p>
+        </header>
+
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories" data-animate>
+          <button type="button" class="menu-tabs__btn is-active" role="tab" aria-selected="true" data-category="starters">Starters</button>
+          <button type="button" class="menu-tabs__btn" role="tab" aria-selected="false" data-category="mains">Main course</button>
+          <button type="button" class="menu-tabs__btn" role="tab" aria-selected="false" data-category="desserts">Desserts</button>
+          <button type="button" class="menu-tabs__btn" role="tab" aria-selected="false" data-category="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-panels">
+          <div class="menu-grid is-active" id="panel-starters" role="tabpanel" data-panel="starters">
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="Seared scallops with pea purée" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Seared scallops</h3>
+                <p class="menu-card__desc">Pea purée, brown butter, lemon zest.</p>
+                <span class="menu-card__price">€18</span>
+              </div>
+            </article>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80" alt="Burrata with heirloom tomatoes" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Burrata &amp; tomatoes</h3>
+                <p class="menu-card__desc">Heirloom tomatoes, basil oil, aged balsamic.</p>
+                <span class="menu-card__price">€16</span>
+              </div>
+            </article>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&q=80" alt="Tuna tartare" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Tuna tartare</h3>
+                <p class="menu-card__desc">Avocado, sesame, ponzu, crispy shallots.</p>
+                <span class="menu-card__price">€19</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="menu-grid" id="panel-mains" role="tabpanel" data-panel="mains" hidden>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="Herb-crusted lamb" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Herb-crusted lamb</h3>
+                <p class="menu-card__desc">Ratatouille, rosemary jus, smoked potato.</p>
+                <span class="menu-card__price">€38</span>
+              </div>
+            </article>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=800&q=80" alt="Pan-seared salmon" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Pan-seared salmon</h3>
+                <p class="menu-card__desc">Fennel, citrus beurre blanc, charred broccolini.</p>
+                <span class="menu-card__price">€34</span>
+              </div>
+            </article>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80" alt="Dry-aged ribeye" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Dry-aged ribeye</h3>
+                <p class="menu-card__desc">Bone marrow butter, confit garlic, red wine reduction.</p>
+                <span class="menu-card__price">€48</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="menu-grid" id="panel-desserts" role="tabpanel" data-panel="desserts" hidden>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80" alt="Chocolate soufflé" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Valrhona soufflé</h3>
+                <p class="menu-card__desc">Vanilla anglaise, salted caramel.</p>
+                <span class="menu-card__price">€14</span>
+              </div>
+            </article>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80" alt="Citrus tart" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Yuzu tart</h3>
+                <p class="menu-card__desc">Italian meringue, pistachio crumble.</p>
+                <span class="menu-card__price">€13</span>
+              </div>
+            </article>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80" alt="Cheese selection" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Artisan cheese</h3>
+                <p class="menu-card__desc">Seasonal pairings, honeycomb, fig jam.</p>
+                <span class="menu-card__price">€16</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="menu-grid" id="panel-drinks" role="tabpanel" data-panel="drinks" hidden>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" alt="Signature cocktails" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Golden hour</h3>
+                <p class="menu-card__desc">Bourbon, honey, smoked rosemary.</p>
+                <span class="menu-card__price">€15</span>
+              </div>
+            </article>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80" alt="Wine selection" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Sommelier pairing</h3>
+                <p class="menu-card__desc">Five glasses matched to your courses.</p>
+                <span class="menu-card__price">€42</span>
+              </div>
+            </article>
+            <article class="menu-card" data-animate>
+              <div class="menu-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Espresso" width="400" height="300" loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__title">Single-origin espresso</h3>
+                <p class="menu-card__desc">Ethiopian beans, dark chocolate notes.</p>
+                <span class="menu-card__price">€4.5</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about__copy" data-animate>
+          <p class="section__eyebrow">Our story</p>
+          <h2 class="section__title">Where tradition meets imagination</h2>
+          <p class="about__text">Melkam began as a small kitchen with a big idea: honour classic techniques while leaving room for curiosity. Today, our team sources from trusted growers and fishers, then shapes each plate with precision and heart.</p>
+          <p class="about__text">The dining room is designed for unhurried evenings—soft light, honest flavours, and service that anticipates without intruding.</p>
+        </div>
+        <figure class="about__figure" data-animate>
+          <div class="about__img-frame">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&q=80" alt="Chef plating a dish in the kitchen" width="600" height="720" loading="lazy">
+          </div>
+          <figcaption class="about__chef">
+            <span class="about__chef-name">Chef Elias van den Berg</span>
+            <span class="about__chef-role">Executive Chef</span>
+            <p class="about__chef-quote">“Food should feel generous—even when it looks minimal.”</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <header class="section__head" data-animate>
+          <p class="section__eyebrow">Gallery</p>
+          <h2 class="section__title">A glimpse inside</h2>
+          <p class="section__lead">Interiors, details, and dishes from our guests’ favourite nights.</p>
+        </header>
+        <div class="gallery-masonry" id="gallery-grid">
+          <button type="button" class="gallery-item" data-animate data-lightbox="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80" data-caption="Dining room ambiance">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Restaurant interior with warm lighting" width="600" height="800" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item gallery-item--tall" data-animate data-lightbox="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1400&q=80" data-caption="Chef's table">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Plated dish close-up" width="600" height="900" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item" data-animate data-lightbox="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1400&q=80" data-caption="Wine service">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80" alt="Wine glasses on table" width="600" height="600" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item" data-animate data-lightbox="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1400&q=80" data-caption="Seasonal tasting">
+            <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80" alt="Elegant restaurant setting" width="600" height="600" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item gallery-item--wide" data-animate data-lightbox="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1400&q=80" data-caption="Dessert course">
+            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&q=80" alt="Dessert plating" width="900" height="600" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item" data-animate data-lightbox="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1400&q=80" data-caption="Fresh ingredients">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Fresh vegetables and herbs" width="600" height="600" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+      <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Close">&times;</button>
+      <figure class="lightbox__figure">
+        <img src="" alt="" id="lightbox-img">
+        <figcaption id="lightbox-caption" class="lightbox__caption"></figcaption>
+      </figure>
+    </div>
+
+    <!-- Reservations + Testimonials -->
+    <section class="section booking-section" id="reservations">
+      <div class="container booking-layout">
+        <div class="booking-form-wrap glass" data-animate>
+          <p class="section__eyebrow">Reservations</p>
+          <h2 class="section__title section__title--sm">Book your table</h2>
+          <p class="section__lead section__lead--tight">For parties over six, please call us—we’ll tailor the evening.</p>
+          <form class="booking-form" id="booking-form" novalidate>
+            <label class="field">
+              <span class="field__label">Date</span>
+              <input type="date" name="date" required class="field__input">
+            </label>
+            <label class="field">
+              <span class="field__label">Time</span>
+              <input type="time" name="time" required class="field__input" value="19:30">
+            </label>
+            <label class="field">
+              <span class="field__label">Guests</span>
+              <select name="guests" class="field__input" required>
+                <option value="1">1 guest</option>
+                <option value="2" selected>2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5 guests</option>
+                <option value="6">6 guests</option>
+              </select>
+            </label>
+            <label class="field field--full">
+              <span class="field__label">Notes (optional)</span>
+              <textarea name="notes" class="field__input field__input--textarea" rows="3" placeholder="Allergies, occasion, seating preference…"></textarea>
+            </label>
+            <button type="submit" class="btn btn--primary btn--block">Request reservation</button>
+            <p class="form-hint" id="form-message" role="status"></p>
+          </form>
+        </div>
+
+        <div class="testimonials" data-animate>
+          <p class="section__eyebrow">Testimonials</p>
+          <h2 class="section__title section__title--sm">Loved by our guests</h2>
+          <div class="testimonial-carousel" id="testimonial-carousel">
+            <div class="testimonial-track" id="testimonial-track">
+              <article class="testimonial-card is-active">
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote class="testimonial-card__quote">“Impeccable pacing, stunning plates, and a wine list that surprises. We’ll be back for the tasting menu.”</blockquote>
+                <cite class="testimonial-card__cite">— Sophie M., Utrecht</cite>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote class="testimonial-card__quote">“The room feels intimate and special. Service was warm and knowledgeable without being stiff.”</blockquote>
+                <cite class="testimonial-card__cite">— James K., London</cite>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars" aria-label="5 out of 5 stars">★★★★☆</div>
+                <blockquote class="testimonial-card__quote">“Beautiful ingredients, artful presentation. Worth every minute of the journey into the city.”</blockquote>
+                <cite class="testimonial-card__cite">— Elena R., Brussels</cite>
+              </article>
+            </div>
+            <div class="testimonial-dots" id="testimonial-dots" role="tablist" aria-label="Testimonial slides"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer class="footer" id="contact">
+      <div class="container footer__grid">
+        <div class="footer__brand" data-animate>
+          <span class="footer__logo">Melkam</span>
+          <p class="footer__tagline">Fine dining in the heart of the city.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+        <div class="footer__block" data-animate>
+          <h3 class="footer__heading">Visit</h3>
+          <p>Keizersgracht 42<br>1015 CS Amsterdam<br>Netherlands</p>
+          <p><a href="tel:+31201234567">+31 20 123 4567</a><br><a href="mailto:hello@melkam.restaurant">hello@melkam.restaurant</a></p>
+        </div>
+        <div class="footer__block" data-animate>
+          <h3 class="footer__heading">Hours</h3>
+          <p>Tue–Thu · 18:00–23:00<br>Fri–Sat · 17:30–00:00<br>Sun · 17:00–22:00<br>Mon · closed</p>
+        </div>
+        <div class="footer__newsletter glass" data-animate>
+          <h3 class="footer__heading">Newsletter</h3>
+          <p class="footer__newsletter-text">Seasonal menus and private events—monthly, never spam.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <label class="visually-hidden" for="newsletter-email">Email</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="you@email.com" class="field__input" required autocomplete="email">
+            <button type="submit" class="btn btn--primary btn--small">Subscribe</button>
+          </form>
+          <p class="form-hint" id="newsletter-msg" role="status"></p>
+        </div>
+      </div>
+      <div class="footer__map-wrap" data-animate>
+        <iframe
+          title="Melkam restaurant location on Google Maps"
+          class="footer__map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.4760986753897!2d4.889648377570362!3d52.37521817178894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam!5e0!3m2!1sen!2snl!4v1700000000000!5m2!1sen!2snl"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Melkam Restaurant. All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
